@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+
+p{
+    font-family: 'Hind Guntur', sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Cabin', sans-serif, 'Times New Roman', Times, serif;
+        
+}
+header{
+    background-color: rgba(53,58,64);
+
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+nav > ul >li > a {
+    text-decoration: none;
+    color: rgba(152,157,158);
+}
+
+.Contenedor__division{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 50vh;
+    color: rgb(254, 255, 255);
+    padding-top: 3%; 
+    
+
+}
+.contenedor__img{
+    
+    width: 50vw;
+
+}
+.contenedor__Texto{
+    width: 50vw;
+    background-color: rgb(52, 58, 64);
+    padding: 2%;
+    
+}
+.contenedor__img{
+
+    width: 50vw;
+    background-image: url("../Img/honolulu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.cabecera__logo{
+    max-width: 120px;
+    max-height: 80px;
+    
+}
+a.cabecera__link--activo {
+    color:rgba(249,247,246);
+}
+
+
+a.cabecera__link:hover{
+    color: rgb(185, 183, 183);
+}
+a.cabecera__link:active{
+    color: rgb(255,255,255);
+}
+a.cabecera__link:visited{
+    color: rgb(170, 170, 170);
+}
+.cabecera{
+    background-color: rgba(53,58,64);
+    color: rgb(255,255,255);
+}
+.cabecera__contenedor__logo{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+.satinado{
+    filter: brightness(50%);
+}
+
+button > a {
+    text-decoration: none;
+    color: rgb(233, 231, 231);
+}
+
+button > a:hover {
+    color: rgb(185, 183, 183);
+} 
+
+.tarjetas{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.tarjetas__titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.formulario__titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.Navegador__boton--color-borde{
+    outline-color: rgba(53,58,64) !important;
+    border-color: rgba(53,58,64) !important;
+}
+.formulario{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.form__button--color{
+   background-color: rgb(150, 201, 62) !important;
+}
+.nav__footer__seccion{
+    background: rgb(29,57,71);
+    background: linear-gradient(90deg, rgba(29,57,71,1) 0%, rgba(31,81,112,1) 100%);
+    height: 10vh;
+}
+
+@media (min-width: 40px) { 
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.0rem;
+}
+    
+p {
+    font-size: 0.7rem;
+}
+a{
+    font-size: 0.7rem;
+}
+            
+}
+@media (min-width: 576px) { 
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.1rem;
+        
+}
+p {
+    font-size: 0.7rem;
+}
+a{
+    font-size: 0.8rem;
+}
+
+.cabecera__logo{
+    width: 110px;
+    height: 70px;
+    
+}
+}
+
+@media (min-width: 992px) { 
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem;
+            
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    a{
+        font-size: 1.0rem;
+    }
+
+.carrusel__texto{
+    float:right; 
+    clear:right;
+    width: 50vw;
+    z-index: 0;
+    top: 30%;
+    right: 0%;
+    left: 50vw;
+    top: 40%;
+    bottom: auto;
+    float: right;
+    margin-left: 25%;
+}
+
+
+.carrusel__titulo, .carrusel__parrafo{
+    text-align: end;
+}
+.carrusel__botones{
+    float: right;
+}
+.nav__links--derecha{
+flex-direction: row-reverse;
+}
+ }
+
