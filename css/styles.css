@@ -39,7 +39,7 @@ nav > ul >li > a {
     width: 100vw;
     height: 50vh;
     color: rgb(254, 255, 255);
-    padding-top: 3%; 
+    margin-top: 3%;
     
 
 }
@@ -184,7 +184,7 @@ a{
         font-size: 1.2rem;
     }
     a{
-        font-size: 1.0rem;
+        font-size: 1.0rem ;
     }
 
 .carrusel__texto{
@@ -209,7 +209,10 @@ a{
     float: right;
 }
 .nav__links--derecha{
-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    
+    
+    
 }
  }
 
