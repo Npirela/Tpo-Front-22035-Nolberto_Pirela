@@ -131,8 +131,8 @@ button > a:hover {
     border-color: rgba(53,58,64) !important;
 }
 .formulario{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 .form__button--color{
    background-color: rgb(150, 201, 62) !important;
@@ -154,9 +154,27 @@ a.link__footer__seccion:visited{
     color: rgb(185, 183, 183) !important;
 }
 
+a#a-form-sec-main-index{
+    text-decoration:underline;
+    text-decoration-style: dotted;
+    font-size: 1.2rem;
+    color: black;
+}
+a#a-form-sec-main-index:hover{
+    color: black;
+}
+a#a-form-sec-main-index:visited{
+    color: black;
+}
 
+textarea::placeholder {
+    
+    font-size: 1.2em;
+  }
 
-
+label#lab-form-sec-mai-index{
+color:rgb(132, 117, 125);
+  }
 @media (min-width: 40px) { 
     h1, h2, h3, h4, h5, h6 {
         font-size: 1.0rem;
@@ -196,13 +214,13 @@ a{
             
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     a{
         font-size: 1.0rem ;
     }
 
-.carrusel__texto{
+/* .carrusel__texto{
     float:right; 
     clear:right;
     width: 50vw;
@@ -214,6 +232,13 @@ a{
     bottom: auto;
     float: right;
     margin-left: 25%;
+} */
+
+.carrusel__texto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 79vw;
+    top: 32%;
 }
 
 
@@ -230,4 +255,5 @@ a{
     
 }
  }
+
 
