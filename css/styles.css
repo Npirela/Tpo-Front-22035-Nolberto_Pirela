@@ -137,6 +137,11 @@ button > a:hover {
 .form__button--color{
    background-color: rgb(150, 201, 62) !important;
 }
+.formulario__ticked{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 .nav__footer__seccion{
     background: rgb(29,57,71);
     background: linear-gradient(90deg, rgba(29,57,71,1) 0%, rgba(31,81,112,1) 100%);
@@ -165,6 +170,26 @@ a#a-form-sec-main-index:hover{
 }
 a#a-form-sec-main-index:visited{
     color: black;
+}
+#comprar-boton-link{
+    text-decoration: none;
+    color: rgb(46, 121, 66);
+}
+a#comprar-boton-link:visited{
+    text-decoration: none !important;
+    color: rgb(46, 121, 66);
+}
+a#comprar-boton-link:hover{
+    color: white !important;
+}
+/* .main__form{
+    width: 100vw;
+    height: 100vh;
+} */
+.tarjetas__form{
+    margin-top: 7%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 textarea::placeholder {
