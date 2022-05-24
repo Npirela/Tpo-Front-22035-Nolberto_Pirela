@@ -22,7 +22,7 @@ const nameValido = nombre => {
 
     
 const apellidoValido = apellido => {
-    return /^[a-zA-Z]{1,200}$/.test(apellido);
+    return /^[a-zA-ZñÑ]{1,200}$/.test(apellido);
 }
 const cantidadValido = cantidad => {
     return /^\d*/.test(cantidad);
@@ -36,6 +36,7 @@ const cantidadValido = cantidad => {
 
 
 // construir funciones
+//validar campos
 const checkName = () =>{
     let valid = false;
 
@@ -57,7 +58,7 @@ const checkName = () =>{
     return valid;
 };
 
-//validar campos
+
 
 // funcion para limpiar la clase de error.
 function quitarClaseError(){
@@ -129,9 +130,7 @@ form.addEventListener('submit', function (e) {
     }
 });
 
-/*Add Instant feedback feature
-The form only shows the error or success when you click the Sign Up button.
-
+/*
 To provide instant feedback, you can attach an event listener to the input event of each field and validate it.
 
 It’s even better to use the event delegation so that you attach the input event listener to the form and validate each field based on the current field id, like this:*/
