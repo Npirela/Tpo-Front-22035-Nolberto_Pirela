@@ -60,6 +60,72 @@ const checkName = () =>{
 
 
 
+const checkApellido = () =>{
+    let valid = false;
+
+    if(apellido.value === ""){
+        alert("Por favor escribe tu apellido sin espacios (el campo no puede estar vacio).");
+        apellido.classList.add("is-invalid");
+        apellido.focus();
+    } else if(!apellidoValido(apellido.value)){
+        alert("Por favor escribe tu apellido sin espacios vacios ni numeros");
+        apellido.classList.add("is-invalid");
+        apellido.focus();
+
+    } else{
+        valid = true;
+        apellido.classList.remove("is-invalid");
+        apellido.classList.add("is-valid");
+    }
+
+    return valid;
+};
+
+
+const checkEmail = () =>{
+    let valid = false;
+
+    if(email.value === ""){
+        alert("Por favor escribe tu email sin espacios (el campo no puede estar vacio).");
+        email.classList.add("is-invalid");
+        email.focus();
+    } else if(!emailValido(email.value)){
+        alert("Por favor escribe tu email sin espacios vacios ni numeros");
+        email.classList.add("is-invalid");
+        email.focus();
+
+    } else{
+        valid = true;
+        email.classList.remove("is-invalid");
+        email.classList.add("is-valid");
+    }
+
+    return valid;
+};
+
+const checkCantidad = () =>{
+    let valid = false;
+
+    if(cantidadTickets.value === ""){
+        alert("Por favor selecciona al menos un ticket.");
+        cantidadTickets.classList.add("is-invalid");
+        cantidadTickets.focus();
+    } else if(!cantidadValido(cantidadTickets.value)){
+        alert("Por favor escribe solo puedes colocar cantidad en numeros");
+        cantidadTickets.classList.add("is-invalid");
+        cantidadTickets.focus();
+
+    } else{
+        valid = true;
+        cantidadTickets.classList.remove("is-invalid");
+        cantidadTickets.classList.add("is-valid");
+    }
+
+    return valid;
+};
+
+
+
 // funcion para limpiar la clase de error.
 function quitarClaseError(){
 let x =document.querySelectorAll(".form-control, .form-selector")
