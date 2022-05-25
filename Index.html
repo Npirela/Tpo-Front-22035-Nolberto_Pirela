@@ -193,7 +193,7 @@
 
            <!-- ........................................................formulario.......................................................... -->
            <section class="formulario" id="sec-mai-index-formulario">
-             <form action="" autocomplete="on">
+             <form action="" autocomplete="on" id="form-orador-charla">
             <div class="formulario__titulo">
               <h6>CONVIERTETE EN UN</h6>
               <h1>ORADOR</h1>
@@ -201,19 +201,19 @@
             </div>
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Nombre" id="nombre" autocomplete="name" aria-label="Nombre">
+                <input type="text" class="form-control" placeholder="Nombre" id="nombre" autocomplete="name" >
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Apellido"  id="apellido" name="apellido"  autocomplete="family-name" aria-label="Apellido">
+                <input type="text" class="form-control" placeholder="Apellido"  id="apellido" name="apellido"  autocomplete="family-name" >
               </div>
             </div>
             <div class="mb-3 mt-3">
               
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Sobre que Quieres Hablar?"></textarea>
+              <textarea class="form-control" id="areadetexto-tema" rows="3" placeholder="Sobre que Quieres Hablar?"></textarea>
               <label for="exampleFormControlTextarea1" class="form-label" id="lab-form-sec-mai-index">Recuerda Incluir un Titulo Para tu charla</label>
             </div>
             <div class="d-grid gap-2 mb-3">
-              <button class="btn btn btn-success form__button--color" type="button" value="submit">Enviar</button>
+              <button class="btn btn btn-success form__button--color" type="submit" value="submit" id="btnenviar">Enviar</button>
               
             </div>
           </form>
@@ -260,5 +260,8 @@
        
         <!-- Scripts Locales .....................................................Scripts Locales -->
         <!-- <script src="resources/bootstrap-5.1.3-dist/js/bootstrap.min.js" ></script> -->
+
+        <!-- script para validar formulario orador -->
+        <script src="js/script_validar_orador.js"></script>
 </body>
 </html>
