@@ -13,7 +13,8 @@ let categoria = document.getElementById("categoria");
 
 // regex
 const emailValido = email => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    //return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);     dada por la profe
+    return /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email); // tomada de https://www.w3.org/TR/2012/WD-html-markup-20120329/input.email.html
 }
 
 const nameValido = nombre => {
