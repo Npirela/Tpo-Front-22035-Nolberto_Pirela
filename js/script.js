@@ -106,11 +106,11 @@ const checkEmail = () =>{
 const checkCantidad = () =>{
     let valid = false;
 
-    if(cantidadTickets.value === ""){
+    if((cantidadTickets.value == 0) || (isNaN(cantidadTickets.value)) ){
         alert("Por favor selecciona al menos un ticket.");
         cantidadTickets.classList.add("is-invalid");
         cantidadTickets.focus();
-    } else if(!cantidadValido(cantidadTickets.value)){
+    } else if(!cantidadValido(cantidadTickets.value)){ //valida los mismo que isnan
         alert("Por favor escribe solo puedes colocar cantidad en numeros");
         cantidadTickets.classList.add("is-invalid");
         cantidadTickets.focus();
@@ -125,6 +125,20 @@ const checkCantidad = () =>{
 };
 
 
+const checkCategoria = () =>{
+    let valid = true;
+    if(categoria.value == 0){
+      alert("si no seleccionas una categoria no tendras descuento ");
+      cantidadTickets.classList.add("is-valid");
+    }
+    if(categoria.value >= 4){
+        alert("debes seleccionar una categoria valida ");
+        cantidadTickets.classList.add("is-invalid");
+        cantidadTickets.focus();
+        valid = false;
+    }
+    return valid;
+};
 
 // funcion para limpiar la clase de error.
 function quitarClaseError(){
