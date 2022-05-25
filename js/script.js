@@ -129,12 +129,12 @@ const checkCategoria = () =>{
     let valid = true;
     if(categoria.value == 0){
       alert("si no seleccionas una categoria no tendras descuento ");
-      cantidadTickets.classList.add("is-valid");
+      categoria.classList.add("is-valid");
     }
     if(categoria.value >= 4){
         alert("debes seleccionar una categoria valida ");
-        cantidadTickets.classList.add("is-invalid");
-        cantidadTickets.focus();
+        categoria.classList.add("is-invalid");
+        categoria.focus();
         valid = false;
     }
     return valid;
