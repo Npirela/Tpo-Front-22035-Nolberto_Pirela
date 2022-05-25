@@ -132,6 +132,9 @@ const checkCategoria = () =>{
       alert("si no seleccionas una categoria no tendras descuento ");
       categoria.classList.add("is-valid");
     }
+    if((categoria.value > 0) && (categoria.value < 4)){
+        categoria.classList.add("is-valid");
+      }
     if(categoria.value >= 4){
         alert("debes seleccionar una categoria valida ");
         categoria.classList.add("is-invalid");
@@ -143,13 +146,24 @@ const checkCategoria = () =>{
 
 // funcion para limpiar la clase de error.
 function quitarClaseError(){
-let x =document.querySelectorAll(".form-control, .form-selector")
+let x =document.querySelectorAll(".form-control, .form-select")
 let i;
 for (i=0; i<x.length; i++){
     x[i].classList.remove('is-invalid')
 
 };
 };
+
+//funcion limpiar clase de validacion
+
+function quitarClaseValido(){
+    let x =document.querySelectorAll(".form-control, .form-select")
+    let i;
+    for (i=0; i<x.length; i++){
+        x[i].classList.remove('is-valid')
+    
+    };
+    };
 
 // funcion boton de resumen
 function total_a_pagar(){
@@ -179,6 +193,7 @@ function total_a_pagar(){
 //borrar el valor del alert total a pagar
 function resetTotalPago(){
     quitarClaseError();
+    quitarClaseValido();
     totalPago.innerHTML="";
 }
 btnBorrar.addEventListener('click', resetTotalPago);
