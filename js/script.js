@@ -10,6 +10,8 @@ let apellido  = document.getElementById("apellido");
 let email = document.getElementById("email");
 let cantidadTickets  = document.getElementById("cantidad");
 let categoria = document.getElementById("categoria");
+let mensajeAlerta=document.getElementById("alert-form-error");
+let errorAlerta=document.getElementById("div-error-form");
 
 // regex
 const emailValido = email => {
@@ -37,16 +39,20 @@ const checkName = () =>{
     let valid = false;
 
     if(nombre.value === ""){
-        alert("Por favor escribe tu nombre sin espacios.");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor escribe tu nombre sin espacios.";
         nombre.classList.add("is-invalid");
         nombre.focus();
     } else if(!nameValido(nombre.value)){
-        alert("Por favor escribe tu nombre sin espacios vacios ni numeros");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor escribe tu nombre sin espacios vacios ni numeros";
         nombre.classList.add("is-invalid");
         nombre.focus();
 
     } else{
         valid = true;
+        errorAlerta.classList.add("visually-hidden");
+        mensajeAlerta.innerHTML="";
         nombre.classList.remove("is-invalid");
         nombre.classList.add("is-valid");
     }
@@ -60,16 +66,20 @@ const checkApellido = () =>{
     let valid = false;
 
     if(apellido.value === ""){
-        alert("Por favor escribe tu apellido sin espacios (el campo no puede estar vacio).");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor escribe tu apellido sin espacios(el campo no puede estar vacio).";
         apellido.classList.add("is-invalid");
         apellido.focus();
     } else if(!apellidoValido(apellido.value)){
-        alert("Por favor escribe tu apellido sin espacios vacios ni numeros");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor escribe tu apellido sin espacios vacios ni numeros";
         apellido.classList.add("is-invalid");
         apellido.focus();
 
     } else{
         valid = true;
+        errorAlerta.classList.add("visually-hidden");
+        mensajeAlerta.innerHTML="";
         apellido.classList.remove("is-invalid");
         apellido.classList.add("is-valid");
     }
@@ -82,16 +92,20 @@ const checkEmail = () =>{
     let valid = false;
 
     if(email.value === ""){
-        alert("Por favor escribe tu email sin espacios (el campo no puede estar vacio).");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor escribe tu email sin espacios (e campo no puede estar vacio).";
         email.classList.add("is-invalid");
         email.focus();
     } else if(!emailValido(email.value)){
-        alert("Por favor escribe tu email sin espacios vacios ni numeros");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor escribe tu email sin espacios vaios ni numeros";
         email.classList.add("is-invalid");
         email.focus();
 
     } else{
         valid = true;
+        errorAlerta.classList.add("visually-hidden");
+        mensajeAlerta.innerHTML="";
         email.classList.remove("is-invalid");
         email.classList.add("is-valid");
     }
@@ -103,16 +117,20 @@ const checkCantidad = () =>{
     let valid = false;
 
     if((cantidadTickets.value == 0) || (isNaN(cantidadTickets.value)) ){
-        alert("Por favor selecciona al menos un ticket.");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor selecciona al menos un ticket.";
         cantidadTickets.classList.add("is-invalid");
         cantidadTickets.focus();
     } else if(!cantidadValido(cantidadTickets.value)){ //valida los mismo que isnan
-        alert("Por favor escribe solo puedes colocar cantidad en numeros");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="Por favor escribe solo puedes colocar cantdad en numeros";
         cantidadTickets.classList.add("is-invalid");
         cantidadTickets.focus();
 
     } else{
         valid = true;
+        errorAlerta.classList.add("visually-hidden");
+        mensajeAlerta.innerHTML="";
         cantidadTickets.classList.remove("is-invalid");
         cantidadTickets.classList.add("is-valid");
     }
@@ -123,15 +141,20 @@ const checkCantidad = () =>{
 
 const checkCategoria = () =>{
     let valid = true;
+    
     if(categoria.value == 0){
-      alert("si no seleccionas una categoria no tendras descuento ");
+      
+      alert("si no seleccionas una categoria no tendrasdescuento");
       categoria.classList.add("is-valid");
     }
     if((categoria.value > 0) && (categoria.value < 4)){
         categoria.classList.add("is-valid");
+        errorAlerta.classList.add("visually-hidden");
+        mensajeAlerta.innerHTML="";
       }
     if(categoria.value >= 4){
-        alert("debes seleccionar una categoria valida ");
+        errorAlerta.classList.remove("visually-hidden");
+        mensajeAlerta.innerHTML="debes seleccionar una categoria valida ";        
         categoria.classList.add("is-invalid");
         categoria.focus();
         valid = false;
